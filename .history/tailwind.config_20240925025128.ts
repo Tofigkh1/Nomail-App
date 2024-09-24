@@ -13,7 +13,6 @@ const config: Config = {
         foreground: "var(--foreground)",
         headerColor: "#F3F3F3",
         textColorGreen: "#00987F",
-        textGray: "#A4A4A9"
       },
     },
   },
