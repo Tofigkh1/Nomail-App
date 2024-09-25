@@ -11,11 +11,14 @@ export default function Sidebar({ children }: { children: ReactNode }) {
     const { expanded, setExpanded } = useContext(SidebarContext);
 
     return (
-        <aside className="h-screen bg-headerColor">
+        <aside className="h-screen bg-slate-400">
             <nav
-                className={`h-full flex flex-col bg-headerColor border-r border-whiteLight3 transition-all duration-200 ease-in-out ml-3 ${expanded ? "w-[127%] h-[130%] " : "w-[99px]"}`}>
-               
-                <ul className=" flex-1 px-3">{children}</ul>
+                className={`h-full flex flex-col bg-slate-400 border-r border-whiteLight3 transition-all duration-300 ease-in-out ml-3 ${expanded ? "w-[140%] h-[130%]" : "w-[95px]"}`}>
+                <div className="p-4 pb-2 flex justify-between items-center">
+
+
+                </div>
+                <ul className="flex-1 px-3">{children}</ul>
             </nav>
         </aside>
     );
@@ -36,7 +39,7 @@ export function SidebarItem({icon, text, active, onClick}: SidebarItemProps) {
     return (
         <li
             onClick={onClick} // Attach the click handler here
-            className={`group relative flex items-center py-2 px-3 my-1 font-medium rounded-md cursor-pointer duration-300 ease-in-out transition-colors 
+            className={`group relative flex items-center py-2 px-3 my-1 font-medium rounded-md cursor-pointer transition-all duration-300 ease-in-out transition-colors mt-8
           ${
                 active
                     ? " text-mainRedLight " // Active item style

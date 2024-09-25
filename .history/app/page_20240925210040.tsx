@@ -1,7 +1,7 @@
 'use client';
 import Header from "@/components/shared/client/Header/header";
 import Sidebar, { SidebarItem, SidebarContext } from '../components/shared/client/SideBarMenu/sideBarMenu';
-import { useState } from "react";
+import { useState, useContext } from "react";
 import NomailPaleSvg from '../components/shared/svg/nomailPaleSvg';
 import NewMail from '../components/shared/svg/newMail';
 import InboxSvg from '../components/shared/svg/InboxSvg';
@@ -16,11 +16,11 @@ import MainFrameMessage from "@/components/shared/client/MainFrameMessage";
 export default function Home() {
     const [expanded, setExpanded] = useState(false); // Sidebar state
 
-    // Sidebar genişliği: genişletildiğinde 250px, daraltıldığında 95px olacak
-    const sidebarWidth = expanded ? '200px' : '45px';
+    // Calculate the width of the sidebar dynamically
+    const sidebarWidth = expanded ? '140px' : '80px'; // 80px when collapsed, 250px when expanded
 
     return (
-        <SidebarContext.Provider value={{ expanded, setExpanded }}>
+        <SidebarContext.Provider value={{ expanded, setExpanded }}> {/* Provide state to children */}
             <div>
                 <Header />
 
@@ -31,50 +31,36 @@ export default function Home() {
                             <SidebarItem
                                 icon={<NewMail />}
                                 text="New Mail"
-                                active={false}
-                                onClick={() => {}} // Handle clicks if needed
                             />
                             <SidebarItem
                                 icon={<InboxSvg />}
                                 text="Inbox"
-                                active={false}
-                                onClick={() => {}}
                             />
                             <SidebarItem
                                 icon={<CalendarSvg />}
                                 text="Calendar"
-                                active={false}
-                                onClick={() => {}}
                             />
                             <SidebarItem
                                 icon={<FavoritesSvg />}
                                 text="Favorites"
-                                active={false}
-                                onClick={() => {}}
                             />
                             <SidebarItem
                                 icon={<ArchiveSvg />}
                                 text="Archive"
-                                active={false}
-                                onClick={() => {}}
                             />
                             <SidebarItem
                                 icon={<GroupSvg />}
                                 text="Groups"
-                                active={false}
-                                onClick={() => {}}
                             />
                             <SidebarItem
                                 icon={<TodoSvg />}
                                 text="To do"
-                                active={false}
-                                onClick={() => {}}
                             />
                         </Sidebar>
                     </div>
 
                     {/* MainFrameMessage Section */}
-                    <div style={{ marginLeft: "73px" }} className="">
+                    <div style={{ marginLeft: sidebarWidth }} className="flex-grow">
                         <MainFrameMessage />
                     </div>
 

@@ -17,7 +17,7 @@ export default function Home() {
     const [expanded, setExpanded] = useState(false); // Sidebar state
 
     // Sidebar genişliği: genişletildiğinde 250px, daraltıldığında 95px olacak
-    const sidebarWidth = expanded ? '200px' : '45px';
+    const sidebarWidth = expanded ? '200px' : '60px';
 
     return (
         <SidebarContext.Provider value={{ expanded, setExpanded }}>
@@ -74,7 +74,7 @@ export default function Home() {
                     </div>
 
                     {/* MainFrameMessage Section */}
-                    <div style={{ marginLeft: "73px" }} className="">
+                    <div style={{expanded ?  marginLeft "73px":"33px" }} className="">
                         <MainFrameMessage />
                     </div>
 
