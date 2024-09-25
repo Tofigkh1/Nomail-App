@@ -13,7 +13,7 @@ export default function Sidebar({ children }: { children: ReactNode }) {
     return (
         <aside className="h-screen bg-headerColor">
             <nav
-                className={`h-full flex flex-col bg-headerColor border-r border-whiteLight3 transition-all duration-200 ease-in-out ml-3 ${expanded ? "w-[127%] h-[130%] " : "w-[99px]"}`}>
+                className={`h-full flex flex-col bg-headerColor border-r border-whiteLight3 transition-all duration-200 ease-in-out ml-3 ${expanded ? "w-[125%] h-[130%] " : "w-[100px]"}`}>
                
                 <ul className=" flex-1 px-3">{children}</ul>
             </nav>

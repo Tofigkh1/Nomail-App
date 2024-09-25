@@ -17,7 +17,7 @@ export default function Home() {
     const [expanded, setExpanded] = useState(false); // Sidebar state
 
     // Sidebar genişliği: genişletildiğinde 250px, daraltıldığında 95px olacak
-    const sidebarWidth = expanded ? '200px' : '45px';
+    const sidebarWidth = expanded ? '200px' : '40px';
 
     return (
         <SidebarContext.Provider value={{ expanded, setExpanded }}>

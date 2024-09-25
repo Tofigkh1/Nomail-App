@@ -16,7 +16,7 @@ const config: Config = {
         textGray: "#A4A4A9",
         sideBarColor: "#E5E5E5",
         textColGreen: "#00987F",
-        bordersColor: "#D1D1D6"
+        bordersColor: 
       },
     },
   },
