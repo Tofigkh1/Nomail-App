@@ -1,30 +1,13 @@
-"use client";
 import Header from "@/components/shared/client/Header/header";
-import Sidebar, { SidebarItem, SidebarContext } from '../components/shared/client/SideBarMenu/sideBarMenu';
-import { useState } from "react";
-import NomailPaleSvg from '../components/shared/svg/nomailPaleSvg';
-import NewMail from '../components/shared/svg/newMail';
-import InboxSvg from '../components/shared/svg/InboxSvg';
-import CalendarSvg from '../components/shared/svg/calendarSvg';
-import FavoritesSvg from '../components/shared/svg/FavoritesSvg';
-import ArchiveSvg from '../components/shared/svg/ArchiveSvg';
-import GroupSvg from '../components/shared/svg/groupSvg';
-import TodoSvg from '../components/shared/svg/TodoSvg';
-import MainFrameMessage from "@/components/shared/client/MainFrameMessage";
-import Calendar from "@/components/shared/client/Calendar";
-import { useRouter } from "next/navigation"; // Düzeltme yapıldı
+import Sidebar, { SidebarItem } from "@/components/shared/client/SideBarMenu/sideBarMenu";
 
-// Home component managing the sidebar state
-export default function Home() {
-    let { push, pathname } = useRouter(); // Artık hata olmayacak
-    const [expanded, setExpanded] = useState(false); // Sidebar state
 
-    // Sidebar genişliği: genişletildiğinde 250px, daraltıldığında 95px olacak
-    const sidebarWidth = expanded ? '200px' : '45px';
 
-    return (
-        <SidebarContext.Provider value={{ expanded, setExpanded }}>
-            <div>
+export default function CalendarPage() {
+
+    return(
+        <div>
+                  <div>
                 <Header />
 
                 <div className="flex">
@@ -89,6 +72,6 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-        </SidebarContext.Provider>
-    );
+        </div>
+    )
 }
