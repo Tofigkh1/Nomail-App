@@ -12,11 +12,11 @@ import GroupSvg from '../components/shared/svg/groupSvg';
 import TodoSvg from '../components/shared/svg/TodoSvg';
 import MainFrameMessage from "@/components/shared/client/MainFrameMessage";
 import Calendar from "@/components/shared/client/Calendar";
-import { useRouter } from "next/navigation"; // Düzeltme yapıldı
+import { useRouter } from "next/router";
 
 // Home component managing the sidebar state
 export default function Home() {
-    let { push, pathname } = useRouter(); // Artık hata olmayacak
+    let { push, pathname } = useRouter();
     const [expanded, setExpanded] = useState(false); // Sidebar state
 
     // Sidebar genişliği: genişletildiğinde 250px, daraltıldığında 95px olacak
@@ -47,7 +47,7 @@ export default function Home() {
                                 icon={<CalendarSvg />}
                                 text="Calendar"
                                 active={false}
-                                onClick={() => push('/calendar')}
+                                onClick={() => {}}
                             />
                             <SidebarItem
                                 icon={<FavoritesSvg />}

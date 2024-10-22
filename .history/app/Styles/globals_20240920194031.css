@@ -2,13 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
-.App {
-  font-family: sans-serif;
-  text-align: center;
-}
-
-
 :root {
   --background: #ffffff;
   --foreground: #171717;

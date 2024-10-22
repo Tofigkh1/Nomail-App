@@ -47,7 +47,7 @@ export default function Home() {
                                 icon={<CalendarSvg />}
                                 text="Calendar"
                                 active={false}
-                                onClick={() => push('/calendar')}
+                                onClick={() => {}}
                             />
                             <SidebarItem
                                 icon={<FavoritesSvg />}
