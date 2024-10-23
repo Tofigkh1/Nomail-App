@@ -2,7 +2,7 @@
 
 import localFont from "next/font/local";
 import "./Styles/globals.css";
-// import Header from "@/components/shared/client/Header/header";
+import Header from "@/components/shared/client/Header/header";
 import { SidebarContext } from "@/components/shared/client/SideBarMenu/sideBarMenu";
 import { useState } from "react";
 
@@ -31,7 +31,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
              <SidebarContext.Provider value={{ expanded, setExpanded }}>
- 
+          <Header />
         {children}
         </SidebarContext.Provider>
 
