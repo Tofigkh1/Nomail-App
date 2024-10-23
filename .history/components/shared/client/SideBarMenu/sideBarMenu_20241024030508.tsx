@@ -9,7 +9,7 @@ export const SidebarContext = React.createContext<{ expanded: boolean; setExpand
 
 // Sidebar component now depends on context for state
 export default function Sidebar({ children }: { children: ReactNode }) {
-    const { expanded } = useContext(SidebarContext);
+    const { expanded, setExpanded } = useContext(SidebarContext);
 
     return (
         <aside className="h-screen bg-headerColor">

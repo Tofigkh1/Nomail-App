@@ -9,7 +9,7 @@ export default function MainFrameMessage() {
                 {/* Search bar container */}
                 <div className="flex items-center border border-bordersColor rounded-md w-72 h-9 ml-1.5 mt-4">
 
-                    <SearchIconSvg  />
+                    
 
                     <input
                         style={{ textIndent: '10px' }}

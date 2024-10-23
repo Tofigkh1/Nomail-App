@@ -1,7 +1,7 @@
 "use client"
 import Header from "@/components/shared/client/Header/header";
 import Sidebar, { SidebarContext, SidebarItem } from "@/components/shared/client/SideBarMenu/sideBarMenu";
-// import NomailPaleSvg from '../../components/shared/svg/nomailPaleSvg';
+import NomailPaleSvg from '../../components/shared/svg/nomailPaleSvg';
 import NewMail from '../../components/shared/svg/newMail';
 import InboxSvg from '../../components/shared/svg/InboxSvg';
 import CalendarSvg from '../../components/shared/svg/calendarSvg';

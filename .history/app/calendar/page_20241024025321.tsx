@@ -1,7 +1,7 @@
 "use client"
 import Header from "@/components/shared/client/Header/header";
 import Sidebar, { SidebarContext, SidebarItem } from "@/components/shared/client/SideBarMenu/sideBarMenu";
-// import NomailPaleSvg from '../../components/shared/svg/nomailPaleSvg';
+import NomailPaleSvg from '../../components/shared/svg/nomailPaleSvg';
 import NewMail from '../../components/shared/svg/newMail';
 import InboxSvg from '../../components/shared/svg/InboxSvg';
 import CalendarSvg from '../../components/shared/svg/calendarSvg';
@@ -10,17 +10,17 @@ import ArchiveSvg from '../../components/shared/svg/ArchiveSvg';
 import GroupSvg from '../../components/shared/svg/groupSvg';
 import TodoSvg from '../../components/shared/svg/TodoSvg';
 import { useState } from "react";
-// import MainFrameMessage from "@/components/shared/client/MainFrameMessage";
+import MainFrameMessage from "@/components/shared/client/MainFrameMessage";
 import { Calendar } from '../../components/shared/client/Calendar/index';
-import { usePathname, useRouter } from "next/navigation";
-// import Link from "next/link"; 
+import { usePathname } from "next/navigation";
+import Link from "next/link"; // Link ile yönlendirme yapacağız
 import CalendarActiveSvg from "../../components/shared/svg/calendarActiveSvg";
 import SettingSvg from "../../components/shared/svg/settingSvg";
 
 export default function CalendarPage() {
     const [expanded, setExpanded] = useState(false); // Sidebar state
     const pathname = usePathname(); // Pathname'i almak için usePathname kullanıldı
-    const { push } = useRouter(); // useRouter'dan push fonksiyonunu al
+    
     // Sidebar genişliği: genişletildiğinde 250px, daraltıldığında 95px olacak
     const sidebarWidth = expanded ? '200px' : '45px';
     

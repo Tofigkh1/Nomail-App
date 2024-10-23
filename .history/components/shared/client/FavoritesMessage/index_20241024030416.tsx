@@ -1,5 +1,5 @@
 // import CheckboxComponent from "../CheckBox";
-// import SearchIconSvg from "../../svg/SearchIconSvg";
+import SearchIconSvg from "../../svg/SearchIconSvg";
 import ProfileSvg from "../../../../components/shared/svg/ProfileSvg"
 import MessageArrovSvg from "../../../../components/shared/svg/MessageArrovSvg"
 export default function FavoritesMessage() {
