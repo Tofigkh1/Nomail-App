@@ -1,8 +1,10 @@
-"use client";
-import type { Metadata } from "next";
+
+import type { Metadata } from "next"
 import localFont from "next/font/local";
 import "./Styles/globals.css";
-
+import Header from "@/components/shared/client/Header/header";
+import { SidebarContext } from "@/components/shared/client/SideBarMenu/sideBarMenu";
+import { useState } from "react";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -21,16 +23,21 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({
+  
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const [expanded, setExpanded] = useState(false); // Sidebar state
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+             <SidebarContext.Provider value={{ expanded, setExpanded }}>
+          <Header />
         {children}
+        </SidebarContext.Provider>
 
       </body>
     </html>
