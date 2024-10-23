@@ -1,6 +1,5 @@
-'use client';
-import React, {  useContext, ReactNode } from "react";
-// import { ChevronFirst, ChevronLast } from "lucide-react";
+import React, { useState, useContext, ReactNode } from "react";
+import { ChevronFirst, ChevronLast } from "lucide-react";
 
 
 export const SidebarContext = React.createContext<{ expanded: boolean; setExpanded: (expanded: boolean) => void; }>({
@@ -10,7 +9,7 @@ export const SidebarContext = React.createContext<{ expanded: boolean; setExpand
 
 // Sidebar component now depends on context for state
 export default function Sidebar({ children }: { children: ReactNode }) {
-    const { expanded } = useContext(SidebarContext);
+    const { expanded, setExpanded } = useContext(SidebarContext);
 
     return (
         <aside className="h-screen bg-headerColor">
@@ -45,7 +44,7 @@ export function SidebarItem({icon, text, active, onClick,style}: SidebarItemProp
                 ${
                   active
                     ? "text-mainRedLight" // Active item style
-                    : expanded || active // Eğer expanded true ise hover stilini ekle
+                    : expanded  // Eğer expanded true ise hover stilini ekle
                     ? "hover:bg-textColorGreen"
                     : "" // Expanded değilse hover stili olmasın
                 }`}

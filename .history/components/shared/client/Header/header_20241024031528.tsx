@@ -1,6 +1,5 @@
-'use client';
 import { useContext } from "react";
-import { SidebarContext } from '../SideBarMenu/sideBarMenu'; // Import context
+import { SidebarContext } from '..'; // Import context
 import NomailLogo from "@/components/shared/svg/headerlLogoSvg";
 import HamburgerBtnSvg from "../../svg/hamburgerBtnSvg"
 
