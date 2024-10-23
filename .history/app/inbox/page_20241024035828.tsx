@@ -1,10 +1,10 @@
 "use client"
 
-export default function InboxPage() {
+export default function CalendarPage() {
     
     return (
         <div>
-          <h1>dsksjdn</h1>
+          <h1></h1>
         </div>
     );
 }

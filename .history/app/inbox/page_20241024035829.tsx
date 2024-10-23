@@ -1,6 +1,6 @@
 "use client"
 
-export default function InboxPage() {
+export default function CalendarPage() {
     
     return (
         <div>
